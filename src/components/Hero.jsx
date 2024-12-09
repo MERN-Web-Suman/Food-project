@@ -1,33 +1,41 @@
 
-import React from 'react';
-import { ReactTyped } from "react-typed";
+import React from 'react'
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <div className='text-black bg-[#219090] py-24'>
-      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[black] font-bold p-2 text-3xl'>
-          Learn with us
-        </p>
-        <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-          Grow with us.
-        </h1>
-        <div className='flex justify-center items-center'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
-            Learn 
-          </p>
-          <ReactTyped
-            className='md:text-5xl sm:text-4xl text-[white] text-xl font-bold md:pl-4 pl-2'
-            strings={['Digital Makerting', 'Web Development', 'Ethical Hacking']}
-            typeSpeed={60}
-            backSpeed={80}
-            loop
-          />
-        </div>
-        <button className='bg-[black] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white'>Get Started</button>
-      </div>
-    </div>
-  );
-};
+    <div>
+        <div className='container grid grid-cols-1 md:grid-cols-2 min-h-[600px] gap-8 text-white ' >
 
-export default Hero;
+            {/* text section */}
+
+            <div className='flex flex-col justify-center gap-5 text-center md:text-left  pb-10 pt-24'  >
+
+                <h1 className='text-5xl font-bold ' >Delicious Food Is Waiting For You </h1>
+
+                <p className='font-semibold text-3xl ' >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Explicabo, animi quae. Corrupti voluptas similique quam expedita provident.
+                     Consequuntur, vitae excepturi?
+                </p>
+
+                <div className='flex gap-4 items-center md:justify-start justify-center ' >
+
+                    <button className=' px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-pink-500 hover:to-orange-500  rounded-xl' >Food Menu</button>
+                    
+                    <button className='px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white  hover:from-pink-500 hover:to-orange-500 rounded-xl' >Book Table</button>
+                </div>
+            </div>
+
+            {/* image section */}
+
+            <div className='flex flex-col justify-center' >
+                <img src="1.png" alt="" />
+            </div>
+
+            <div></div>
+
+        </div>
+
+    </div>
+  )
+}

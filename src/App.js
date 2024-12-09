@@ -1,21 +1,31 @@
 // import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Analytics from './components/Analytics';
-import Newsletter from './components/Newsletter';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
+import TopList from './components/TopList';
+import Banner from './components/Banner';
+import OurServices from './components/OurServices';
+
+const bgStyle = {
+            backgroundImage : `url(${"pexels.jpg"})`,
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
+            backgroundPosition : "center",
+};
+
 
 function App() {
   return (
-    <div className="App">
-        <Header></Header>
+    <div   className="overflow-x-hidden">
+        
+        <div style={bgStyle} className='min-h-screen bg-white/5  backdrop-blur-md ' >
+        <Navbar></Navbar>
       <Hero></Hero>
-      <Analytics></Analytics>
-      <Newsletter></Newsletter>
-      <Cards></Cards>
-      <Footer></Footer>
+      <TopList></TopList>
+      <Banner></Banner>
+      
+        </div>
+        <OurServices></OurServices>
         
     </div>
   );
